@@ -86,7 +86,7 @@ a {
 
 .site-header {
   display: grid;
-  grid-template-columns: 1fr 1fr [logo-start] minmax(100px, max-content) [logo-end] 1fr 1fr;
+  grid-template-columns: 1fr  [logo-start] minmax(100px, max-content) [logo-end] 1fr 1fr;
   grid-template-rows: [logo-start] 100px [logo-end];
   grid-gap: 5vw;
   max-width: 600px;
