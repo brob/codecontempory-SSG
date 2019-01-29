@@ -1,6 +1,7 @@
 ---
 title: Practical CSS Grid
 subtitle: Learn about the biggest revolution in Web Design history with CSS Grid
+mainImage: /src/images/uploads/grid-promo.png
 aside: 
     title: What you'll learn
     preTitle: 

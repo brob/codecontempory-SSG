@@ -1,0 +1,12 @@
+---
+title: Courses
+subtitle: A collection of courses to get you up and running with the modern way of writing code.
+layout: layouts/base.html
+---
+
+<section class="homepage-courses">
+  <h2>Current and Future Courses</h2>
+  {% for course in collections.courses %}
+    {% include courses %}
+  {% endfor %}
+</section>

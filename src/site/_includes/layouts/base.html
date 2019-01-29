@@ -27,15 +27,17 @@
         {% if aside %}
         <div class="banner__aside">
           {% if aside.preTitle %}<h4 class="pre-title">{{ aside.preTitle }}</h4>{% endif %}
-          {% if aside.title %}<h2 class="aside__title"><a href="#">{{ aside.title }}</a></h2>{% endif %}
+          {% if aside.title %}<h2 class="aside__title">{{ aside.title }}</h2>{% endif %}
           {% if aside.description %}<p class="aside__description">{{ aside.description }}</p>{% endif %}
           {% if aside.link %}<a href="#" class="button">{% if aside.linkText %}{{ aside.linkText }}{% else %}Sign Up Now{% endif %}</a>{% endif %}
         </div>
+        {% endif %}
+
       </section>
-      {% endif %}
       {% endblock %}
 
       {{ content | safe }}
+
       {% include footer %}
     </div>
   </body>

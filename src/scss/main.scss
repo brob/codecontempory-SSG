@@ -31,7 +31,8 @@ a {
   font-size: .75rem;
   background-color: $color-teal;
   color: $color-white;
-
+  text-align: center;
+  border-radius: 3px;
 }
 
 .pre-title {
@@ -40,7 +41,8 @@ a {
 }
 
 .banner {
-  padding: 15vh 40px 15vh;
+  padding: 20vh 7.5vw 15vh;
+  margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1.25fr .85fr;
   grid-gap: 80px;
@@ -107,4 +109,45 @@ a {
       max-width: 100%;
     }
   }
+}
+
+
+.homepage-courses {
+  margin: auto;
+  max-width: 1000px;
+
+  .course {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 'image .'
+                         'image title'
+                         'image description'
+                         'image button'
+                         'image .';
+    grid-column-gap: 5vw;
+    margin-bottom: 5vw;
+    align-content: center;
+    img {
+      grid-area: image;
+      max-width: 100%;
+      border-radius: 5px;
+
+    }
+    &__title {
+      grid-area: title;
+      margin: 0;
+    }
+    &__description {
+      grid-area: description;
+    }
+    &__button {
+      grid-area: button;
+    }
+  }
+}
+
+.main-content {
+  max-width: 1000px;
+  margin: auto;
 }
