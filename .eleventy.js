@@ -4,6 +4,7 @@ module.exports = function(config) {
   config.addFilter("dateDisplay", require("./filters/dates.js") );
   config.addFilter("timestamp", require("./filters/timestamp.js") );
   config.addFilter("squash", require("./filters/squash.js") );
+  config.addFilter("slice", require("./filters/slice.js") );
   config.addPassthroughCopy("src/images");
 
   config.addCollection('courses', collection => {

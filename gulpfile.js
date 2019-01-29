@@ -6,7 +6,7 @@ var shell = require('gulp-shell');
   Our gulp tasks live in their own files,
   for the sake of clarity.
  */
-require('require-dir')('./gulp-tasks');
+require('require-dir')('./gulp-tasks', { recurse: true });
 
 
 /*
