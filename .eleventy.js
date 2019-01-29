@@ -6,7 +6,7 @@ module.exports = function(config) {
   config.addFilter("squash", require("./filters/squash.js") );
   config.addPassthroughCopy("src/images");
 
-  eleventyConfig.addCollection('courses', collection => {
+  config.addCollection('courses', collection => {
     return collection.getFilteredByGlob('src/site/courses/*.md');
   });
 
