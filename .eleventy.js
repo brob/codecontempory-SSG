@@ -4,6 +4,11 @@ module.exports = function(config) {
   config.addFilter("dateDisplay", require("./filters/dates.js") );
   config.addFilter("timestamp", require("./filters/timestamp.js") );
   config.addFilter("squash", require("./filters/squash.js") );
+  config.addPassthroughCopy("src/images");
+
+  eleventyConfig.addCollection('courses', collection => {
+    return collection.getFilteredByGlob('src/site/courses/*.md');
+  });
 
   return {
     dir: {
@@ -11,9 +16,9 @@ module.exports = function(config) {
       output: "dist",
       includes: "_includes"
     },
-    templateFormats : ["njk", "md"],
-    htmlTemplateEngine : "njk",
-    markdownTemplateEngine : "njk"
+    templateFormats : ["html", "md"],
+    htmlTemplateEngine : "liquid",
+    markdownTemplateEngine : "liquid"
   };
 
 };
