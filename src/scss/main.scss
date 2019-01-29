@@ -21,12 +21,16 @@ h1, h2, h3, h4 {
 }
 p {
   margin: 0 0 .5rem;
+  line-height: 1.6em;
 }
 
 a {
   color: $color-green;
   text-decoration: none;
-
+  transition: .2s ease-out;
+  &:hover {
+    color: darken($color-green, 20%);
+  }
 }
 .button {
   display: inline-block;
@@ -36,6 +40,10 @@ a {
   color: $color-white;
   text-align: center;
   border-radius: 3px;
+  &:hover {
+    color: $color-white;
+    background-color: darken($color-teal, 20%);
+  }
 }
 
 .pre-title {
@@ -128,7 +136,7 @@ a {
                          'image description'
                          'image button'
                          'image .';
-    grid-column-gap: 5vw;
+    grid-column-gap: 3vw;
     margin-bottom: 5vw;
     align-content: center;
     img {
