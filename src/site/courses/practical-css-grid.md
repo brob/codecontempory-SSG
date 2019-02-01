@@ -6,7 +6,7 @@ aside:
     title: What you'll learn
     preTitle: 
     description: You've heard about CSS Grid layout. You know it's the new hotness in the web design world, but you haven't started using it yet. 
-    link: /
+    link: https://store.codecontemporary.com/practical-css-grid/buy
     linkText: Sign Up Now
 ---
 
