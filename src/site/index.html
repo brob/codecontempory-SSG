@@ -6,7 +6,7 @@ aside:
   title: Practical CSS Grid
   preTitle: Featured Course
   description: You’ve heard about CSS Grid layout, but if you haven’t gotten started with it, let me walk you through all its features in a simple, practical approach. By the end of this course, you’ll understand Grid and have practical examples to put into production right away!
-  link: /
+  link: https://store.codecontemporary.com/practical-css-grid
   linkText: Sign Up Now
 ---
 
@@ -20,7 +20,7 @@ aside:
 
 
 <section class="about">
-    
+    <img class="about__image" src="/src/images/uploads/headshot.jpg" alt="">
     <div class="about__content">
       <h3 class="about__headline">Founder and Lead Advocate: Bryan Robinson</h4>
       <p>My name is <a href="http://bryanlrobinson.com" title="Bryan's personal site">Bryan Robinson</a>. I'm a designer, developer and teacher based in Memphis, Tenn. I've been passionate about HTML, CSS and JS for my entire career, and I want to teach you to be just as passionate about it, as well.</p>
@@ -28,7 +28,7 @@ aside:
     
       <div class="blog-feed">
         <h4 class="about__subhead">More from Bryan</h4>
-        {% assign postList = posts.items | slice: "3" %}
+        {% assign postList = posts.items | slice: "2" %}
         {% for post in postList %}
           <article class="post">
             <h4 class="post__headline"><a href="{{ post.url }}">{{ post.title }}</a></h4>
@@ -37,6 +37,5 @@ aside:
         {% endfor %}
     </div>
   </div>
-  <img src="/src/images/uploads/headshot.jpg" alt="">
 
 </section>

@@ -8,7 +8,9 @@ html {
   font-size: 20px;
   font-family: 'Merriweather', serif;
   font-weight: 300;
-
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 body {
   margin: 0;
@@ -60,8 +62,14 @@ a {
   background-image: url('/src/images/background-image.jpg');
   background-size: cover;
   align-items: center;
+  @media (max-width: 1280px) {
+    display:block;
+  }
   &__content {
     color: $color-white;
+    @media (max-width: 1280px) {
+      margin-bottom: 2rem;
+    }
   }
   &__title {
     font-size: 3rem;
@@ -126,11 +134,17 @@ a {
 .homepage-courses {
   margin: auto;
   max-width: 1000px;
-
+  width: 90vw;
+  @media (max-width: 768px) {
+    h2 {
+      margin: 0 0 5vw;
+      text-align: center;
+    }
+  }
   .course {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: [image-start] repeat(5, auto) [image-end];
     grid-template-areas: 'image .'
                          'image title'
                          'image description'
@@ -139,12 +153,16 @@ a {
     grid-column-gap: 3vw;
     margin-bottom: 5vw;
     align-content: center;
+
     img {
       grid-area: image;
       max-width: 100%;
       border-radius: 5px;
-
+      mix-blend-mode: overlay;
+      z-index: 1;
+      object-fit: cover;
     }
+
     &__title {
       grid-area: title;
       margin: 0;
@@ -155,25 +173,54 @@ a {
     &__button {
       grid-area: button;
     }
+    @media (max-width: 768px) {
+      grid-template-columns: [image-start] 1fr [image-end];
+      grid-template-areas: '.'
+                           'title'
+                           'description'
+                           'button'
+                           '.';
+      grid-row-gap: 5vw;
+
+      background-color: $color-black;
+      mix-blend-mode: overlay;
+
+      &__title, &__description, &__button {
+        z-index: 10;
+        color: white;
+        margin: 0 5vw;
+      }
+    }
   }
 }
 
 .main-content {
   max-width: 1000px;
+  width: 90vw;
   margin: auto;
 }
 
 .about {
-  // background-color: $color-darkblue;
-  // color: $color-white;
   display: grid;
-  grid-template-columns: 1fr minmax(300px, 800px);
+  grid-template-columns: 1fr minmax(500px, .75fr);
   max-width: 2000px;
   margin: auto;
-  img {
+  @media (max-width: 1000px) {
+    display: block;
+  }
+  &__image {
+    grid-column: 2;
+    grid-row: 1;
     height: 100%;
+    max-height: 55vw;
     max-width: 100%;
     object-fit: cover;
+    object-position: left center;
+    @media (max-width: 1000px) {
+      width: 100%;
+      object-position: left top;
+
+    }
   }
   &__content {
     padding: 20px;
@@ -192,4 +239,12 @@ a {
       margin-bottom: .25em;
     }
   }
+}
+
+.footer {
+  background-color: $color-darkblue;
+  color: $color-white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
 }
