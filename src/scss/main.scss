@@ -180,21 +180,24 @@ a {
       grid-area: button;
     }
     @media (max-width: 768px) {
+      display: block;
       grid-template-columns: [image-start] 1fr [image-end];
       grid-template-areas: '.'
                            'title'
                            'description'
                            'button'
                            '.';
-      grid-row-gap: 5vw;
+      
+      margin-bottom: 2.5rem;
 
-      background-color: $color-black;
-      mix-blend-mode: overlay;
-
+      &__button {
+        display: block;
+      }
+      &__image {
+        margin-bottom: 1rem;
+      }
       &__title, &__description, &__button {
         z-index: 10;
-        color: white;
-        margin: 0 5vw;
       }
     }
   }
@@ -275,7 +278,7 @@ a {
   }
   form {
     display: grid;
-    grid-template-columns: 1fr minmax(100px, 300px);
+    grid-template-columns: minmax(55vw, 1fr) 1fr;
     grid-gap: 20px;
   }
 }
