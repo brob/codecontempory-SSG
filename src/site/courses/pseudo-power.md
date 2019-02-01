@@ -6,6 +6,6 @@ aside:
     title: What you'll learn
     preTitle: 
     description: In this course, I'll be explaining exactly what pseudo elements are, as well as diving into many use cases for them. I'm still planning content, but just as with all my courses, there will be plenty of examples and code that can get you up and running right away.
-    link: /
+    link: https://store.codecontemporary.com/pseudo-power-using-the-powerful-css-before-and-after-pseudo-elements
     linkText: Sign Up Now
 ---
