@@ -277,7 +277,7 @@ a {
   }
   form {
     display: grid;
-    grid-template-columns: minmax(55vw, 1fr) 1fr;
+    grid-template-columns: minmax(200px, 1fr) minmax(150px, .3fr);
     grid-gap: 20px;
   }
 }
