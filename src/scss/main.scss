@@ -231,7 +231,10 @@ a {
     }
   }
   &__content {
-    padding: 20px;
+    padding: 50px;
+    @media (max-width: 1000px) {
+      padding: 20px;
+    }
   }
   &__headline {
     font-size: 2rem;
